@@ -18,9 +18,8 @@ class ItemPedido:
         return self._quantidade
 
     @property
-    def preco_no_momento(self) -> int:
+    def preco_no_momento(self) -> float:
         return self._preco_no_momento
 
-    @property
-    def calcular_subtotal(self) -> int:
+    def calcular_subtotal(self) -> float:
         return self._preco_no_momento * self._quantidade

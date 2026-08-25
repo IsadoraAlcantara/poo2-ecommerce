@@ -41,8 +41,8 @@ if __name__ == "__main__":
     from ecommerce.produto import Produto
 
     cat = Categoria("Informática")
-    notebook = Produto("Notebook", 3500.0, 10, cat, "Notebook azul")
-    mouse = Produto("Mouse", 150.0, 20, cat, "Mouse preto")
+    notebook = Produto("Notebook", 3500.0, 10, cat)
+    mouse = Produto("Mouse", 150.0, 20, cat)
 
     carrinho = Carrinho()
     carrinho.adicionar_item(notebook, 1)

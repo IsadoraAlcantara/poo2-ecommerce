@@ -6,7 +6,7 @@ from ecommerce.item_carrinho import ItemCarrinho
 class TestItemCarrinho:
     def setup_method(self) -> None:
         cat = Categoria("Informática")
-        self.notebook = Produto("Notebook", 1000.0, 10, cat, "Notebook azul")
+        self.notebook = Produto("Notebook", 1000.0, 10, cat)
 
     def test_cria_item_com_produto_e_quantidade(self) -> None:
         item = ItemCarrinho(self.notebook, 2)

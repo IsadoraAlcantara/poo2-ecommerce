@@ -9,7 +9,7 @@ from ecommerce.produto import Produto
 class TestPagamento:
     def setup_method(self) -> None:
         self.cat = Categoria("Informática")
-        self.notebook = Produto("Notebook", 3500.0, 10, self.cat, "Notebook azul")
+        self.notebook = Produto("Notebook", 3500.0, 10, self.cat)
         self.pedido = Pedido()
         self.pedido.adicionar_item(self.notebook, 1)
 

@@ -19,8 +19,8 @@ class Pedido:
         return list(self._itens)
 
     @property
-    def status(self) -> list:
-        return list(self._status)
+    def status(self) -> str:
+        return self._status
 
     @property
     def pagamento(self) -> list:
@@ -83,3 +83,9 @@ class Pedido:
 
     def cancelar(self) -> None:
         self._transicionar(StatusPedido.CANCELADO)
+
+
+    def confirmar_pagamento(self) -> None:
+        self._transicionar(StatusPedido.PAGO)
+        self._pagamento = Pagamento(self, self.calcular_total())
+        self._pagamento.confirmar()

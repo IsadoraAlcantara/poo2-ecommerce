@@ -7,8 +7,8 @@ class TestCarrinho:
 
     def setup_method(self) -> None:
         cat = Categoria("Informática")
-        self.notebook = Produto("Notebook", 3500.0, 10, cat, "Notebook azul")
-        self.mouse = Produto("Mouse", 150.0, 20, cat, "Mouse preto")
+        self.notebook = Produto("Notebook", 3500.0, 10, cat)
+        self.mouse = Produto("Mouse", 150.0, 20, cat)
 
     def test_carrinho_vazio(self) -> None:
         carrinho = Carrinho()
@@ -54,5 +54,3 @@ class TestCarrinho:
             assert False, "Deveria ter lançado exceção"
         except ValueError:
             pass
-
-    # Adcionar testes de esvaziar carrinho

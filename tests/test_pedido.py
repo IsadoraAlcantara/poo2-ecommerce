@@ -10,8 +10,8 @@ from ecommerce.estrategia_frete import FreteFixo, FreteGratisAcimaDe
 class TestPedido:
     def setup_method(self) -> None:
         self.cat = Categoria("Informática")
-        self.notebook = Produto("Notebook", 3500.0, 10, self.cat, "Notebook azul")
-        self.mouse = Produto("Mouse", 150.0, 20, self.cat, "Mouse preto")
+        self.notebook = Produto("Notebook", 3500.0, 10, self.cat)
+        self.mouse = Produto("Mouse", 150.0, 20, self.cat)
 
     def test_criar_pedido_vazio(self) -> None:
         pedido = Pedido()
@@ -61,11 +61,11 @@ class TestPedido:
         )
         assert valor_final == (3500.0 * 0.90) + 25.0
 
-def test_calcular_valor_final_frete_gratis_acima_do_minimo(self) -> None:
-    pedido = Pedido()
-    pedido.adicionar_item(self.notebook, 1)
-    estrategia_frete = FreteGratisAcimaDe(valor_minimo=1000.0, valor_frete=40.0)
-    assert pedido.calcular_valor_final(estrategia_frete=estrategia_frete) == 3500.0
+    def test_calcular_valor_final_frete_gratis_acima_do_minimo(self) -> None:
+        pedido = Pedido()
+        pedido.adicionar_item(self.notebook, 1)
+        estrategia_frete = FreteGratisAcimaDe(valor_minimo=1000.0, valor_frete=40.0)
+        assert pedido.calcular_valor_final(estrategia_frete=estrategia_frete) == 3500.0
 
     def test_nao_adicionar_apos_finalizado(self) -> None:
         pedido = Pedido()
@@ -78,7 +78,7 @@ def test_calcular_valor_final_frete_gratis_acima_do_minimo(self) -> None:
         pedido = Pedido()
         pedido.adicionar_item(self.notebook, 1)
         pedido.cancelar()
-        assert pedido.status == "cancelado"
+        assert pedido._status == "cancelado"
 
     def test_transicao_invalida_lanca_erro(self) -> None:
         pedido = Pedido()

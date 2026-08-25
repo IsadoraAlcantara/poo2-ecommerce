@@ -3,11 +3,12 @@ class Cliente:
         self.nome = nome
         self.email = email
         self.carrinho: "Carrinho | None" = None
-        self._pedidos: list["Pedidos"] = []
+        self._pedidos: list["Pedido"] = []
 
     @property
-    def pedidos(self):
+    def pedidos(self) -> list["Pedido"]:
         return list(self._pedidos)
+
 
     def adicionar_pedido(self, pedido: "Pedido") -> None:
         self._pedidos.append(pedido)

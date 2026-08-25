@@ -8,8 +8,8 @@ class TestFluxoCompra:
 
     def setup_method(self) -> None:
         self.cat = Categoria("Informática")
-        self.notebook = Produto("Notebook", 3500.0, 10, self.cat, "Notebook azul")
-        self.mouse = Produto("Mouse", 150.0, 20, self.cat, "Mouse preto")
+        self.notebook = Produto("Notebook", 3500.0, 10, self.cat)
+        self.mouse = Produto("Mouse", 150.0, 20, self.cat)
 
     def test_fluxo_completo(self) -> None:
         maria = Cliente("Maria", "maria@email.com")
