@@ -1,10 +1,11 @@
-from ecommerce.item_pedido import ItemPedido
-from ecommerce.pagamento import Pagamento
-from ecommerce.status_pedido import StatusPedido
-from ecommerce.estrategia_desconto import EstrategiaDesconto
+from ecommerce.criador_pagamento import CriadorPagamento
 from ecommerce.cupom import Cupom
+from ecommerce.item_pedido import ItemPedido
 from ecommerce.estrategia_desconto import EstrategiaDesconto
 from ecommerce.estrategia_frete import EstrategiaFrete
+from ecommerce.forma_pagamento import FormaPagamento
+from ecommerce.pagamento import Pagamento
+from ecommerce.status_pedido import StatusPedido
 
 
 class Pedido:
@@ -13,6 +14,7 @@ class Pedido:
         self._status = StatusPedido.CRIADO
         self._pagamento: Pagamento | None = None
         self._cupom: Cupom | None = None
+        self._criador_pagamento = CriadorPagamento()
 
     @property
     def itens(self) -> list[ItemPedido]:
@@ -84,8 +86,11 @@ class Pedido:
     def cancelar(self) -> None:
         self._transicionar(StatusPedido.CANCELADO)
 
-
-    def confirmar_pagamento(self) -> None:
+    def confirmar_pagamento(
+        self, forma: FormaPagamento = FormaPagamento.PIX, **dados
+    ) -> None:
         self._transicionar(StatusPedido.PAGO)
-        self._pagamento = Pagamento(self, self.calcular_total())
+        self._pagamento = self._criador_pagamento.criar(
+            forma, self, self.calcular_total(), **dados
+        )
         self._pagamento.confirmar()
