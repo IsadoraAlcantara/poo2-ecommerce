@@ -1,15 +1,32 @@
+from ecommerce.carrinho import Carrinho
+from ecommerce.criador_notificacao import CanalNotificacao
+
+
 class Cliente:
-    def __init__(self, nome: str, email: str) -> None:
+    def __init__(
+        self,
+        nome: str,
+        email: str,
+        telefone: str = "",
+        canal_preferido: CanalNotificacao = CanalNotificacao.EMAIL,
+    ) -> None:
         self.nome = nome
         self.email = email
-        self.carrinho: "Carrinho | None" = None
+        self.telefone = telefone
+        self.canal_preferido = canal_preferido
+        self.carrinho: Carrinho | None = None
         self._pedidos: list["Pedido"] = []
 
     @property
     def pedidos(self) -> list["Pedido"]:
         return list(self._pedidos)
 
-
+    @property
+    def contato(self) -> str:
+        if self.canal_preferido == CanalNotificacao.SMS:
+            return self.telefone
+        return self.email
+    
     def adicionar_pedido(self, pedido: "Pedido") -> None:
         self._pedidos.append(pedido)
 
