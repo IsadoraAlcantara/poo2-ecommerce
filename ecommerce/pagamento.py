@@ -1,5 +1,5 @@
-from datetime import date
 from abc import ABC, abstractmethod
+from datetime import date
 
 from ecommerce.situacao_pagamento import SituacaoPagamento
 
