@@ -1,5 +1,3 @@
-from pydoc import cli
-
 from ecommerce.criador_notificacao import CriadorNotificacao
 
 
