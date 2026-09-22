@@ -15,6 +15,7 @@ class Pedido:
         self._status = StatusPedido.CRIADO
         self._pagamento: Pagamento | None = None
         self._cupom: Cupom | None = None
+        self._criador_pagamento = CriadorPagamento()
 
     @property
     def itens(self) -> list[ItemPedido]:
@@ -83,6 +84,9 @@ class Pedido:
     @property
     def entrega(self) -> Entrega | None:
         return self._entrega
+
+    def entregar(self) -> None:
+        self._transicionar(StatusPedido.ENTREGUE)
 
     def registrar_entrega(self, entrega: Entrega) -> None:
         if self._status != StatusPedido.PAGO:
