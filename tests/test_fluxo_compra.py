@@ -2,6 +2,7 @@ from ecommerce.carrinho import Carrinho
 from ecommerce.categoria import Categoria
 from ecommerce.cliente import Cliente
 from ecommerce.produto import Produto
+from ecommerce.criador_pagamento import CriadorPagamento
 
 
 class TestFluxoCompra:
@@ -25,7 +26,7 @@ class TestFluxoCompra:
         assert len(maria.pedidos) == 1
         assert maria.carrinho.quantidade_itens() == 0
 
-        pedido.confirmar_pagamento()
+        pedido.confirmar_pagamento(criador_pagamento=CriadorPagamento())
         assert pedido.status == "pago"
 
         pedido.enviar()

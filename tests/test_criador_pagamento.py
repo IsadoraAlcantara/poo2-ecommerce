@@ -26,7 +26,7 @@ class TestCriadorPagamento:
             FormaPagamento.CARTAO_CREDITO, self.pedido, 3600.0, parcelas=3
         )
         assert isinstance(pagamento, PagamentoCartao)
-        assert pagamento.parcelas == 3
+        assert pagamento._parcelas == 3
 
     def test_forma_desconhecida_lanca_erro(self) -> None:
         with pytest.raises(ValueError):

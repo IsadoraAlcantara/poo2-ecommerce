@@ -3,9 +3,14 @@ from datetime import timedelta, date
 
 from ecommerce.situacao_pagamento import SituacaoPagamento
 from ecommerce.pagamento import Pagamento, PagamentoBoleto
+from ecommerce.pedido import Pedido
 
 
 class TestPagamento:
+
+    def setup_method(self) -> None:
+        self.pedido = Pedido()
+
     def test_pagamento_e_abstrato(self) -> None:
         with pytest.raises(TypeError):
             Pagamento(self.pedido, 3500.0)

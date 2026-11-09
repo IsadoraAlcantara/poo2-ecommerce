@@ -4,6 +4,7 @@ from ecommerce.categoria import Categoria
 from ecommerce.pedido import Pedido
 from ecommerce.produto import Produto
 from ecommerce.expedidor import ExpedidorLojaCentral, EntregaCorreios
+from ecommerce.criador_pagamento import CriadorPagamento
 
 
 class TestExpedidor:
@@ -14,13 +15,13 @@ class TestExpedidor:
     def _pedido_pago(self) -> Pedido:
         pedido = Pedido()
         pedido.adicionar_item(self.notebook, 1)
-        pedido.confirmar_pagamento()
+        pedido.confirmar_pagamento(criador_pagamento=CriadorPagamento())
         return pedido
 
     def test_loja_central_despacha_pelos_correios(self) -> None:
         entrega = ExpedidorLojaCentral().despachar(self._pedido_pago())
         assert isinstance(entrega, EntregaCorreios)
-        assert entrega.modalidade == "SEDEX"
+        assert entrega._modalidade == "SEDEX"
 
     def test_despachar_registra_entrega_e_muda_o_estado(self) -> None:
         pedido = self._pedido_pago()
