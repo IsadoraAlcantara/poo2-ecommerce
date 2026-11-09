@@ -1,11 +1,11 @@
 import pytest
 
-from ecommerce.pedido import Pedido
-from ecommerce.criador_pagamento import CriadorPagamento
-from ecommerce.forma_pagamento import FormaPagamento
-from ecommerce.pagamento import PagamentoPix, PagamentoCartao
-from ecommerce.produto import Produto
-from ecommerce.categoria import Categoria
+from ecommerce.dominio.pedido import Pedido
+from ecommerce.dominio.criador_pagamento import CriadorPagamento
+from ecommerce.dominio.forma_pagamento import FormaPagamento
+from ecommerce.dominio.pagamento import PagamentoPix, PagamentoCartao
+from ecommerce.dominio.produto import Produto
+from ecommerce.dominio.categoria import Categoria
 
 
 class TestCriadorPagamento:

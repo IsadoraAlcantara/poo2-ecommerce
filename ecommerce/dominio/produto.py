@@ -1,6 +1,6 @@
 from math import prod
 
-from ecommerce.categoria import Categoria
+from ecommerce.dominio.categoria import Categoria
 
 
 class Produto:
@@ -32,7 +32,7 @@ class Produto:
 
 
 if __name__ == "__main__":
-    from ecommerce.categoria import Categoria
+    from ecommerce.dominio.categoria import Categoria
 
     cat = Categoria("Informática")
     produto = Produto("Notebook", 3000.00, 10, cat)

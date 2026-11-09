@@ -1,6 +1,6 @@
 from datetime import date
 
-from ecommerce.estrategia_desconto import EstrategiaDesconto
+from ecommerce.dominio.estrategia_desconto import EstrategiaDesconto
 
 
 class Cupom:

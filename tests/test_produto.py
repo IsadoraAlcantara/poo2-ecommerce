@@ -1,5 +1,5 @@
-from ecommerce.categoria import Categoria
-from ecommerce.produto import Produto
+from ecommerce.dominio.categoria import Categoria
+from ecommerce.dominio.produto import Produto
 
 
 class TestProduto:

@@ -1,5 +1,5 @@
-from ecommerce.carrinho import Carrinho
-from ecommerce.criador_notificacao import CanalNotificacao
+from ecommerce.dominio.carrinho import Carrinho
+from ecommerce.infraestrurura.criador_notificacao import CanalNotificacao
 
 
 class Cliente:

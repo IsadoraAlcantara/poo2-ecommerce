@@ -1,12 +1,12 @@
-from ecommerce.criador_pagamento import CriadorPagamento
-from ecommerce.cupom import Cupom
-from ecommerce.entrega import Entrega
-from ecommerce.estrategia_desconto import EstrategiaDesconto
-from ecommerce.estrategia_frete import EstrategiaFrete
-from ecommerce.forma_pagamento import FormaPagamento
-from ecommerce.item_pedido import ItemPedido
-from ecommerce.pagamento import Pagamento
-from ecommerce.status_pedido import StatusPedido
+from ecommerce.dominio.criador_pagamento import CriadorPagamento
+from ecommerce.dominio.cupom import Cupom
+from ecommerce.dominio.entrega import Entrega
+from ecommerce.dominio.estrategia_desconto import EstrategiaDesconto
+from ecommerce.dominio.estrategia_frete import EstrategiaFrete
+from ecommerce.dominio.forma_pagamento import FormaPagamento
+from ecommerce.dominio.item_pedido import ItemPedido
+from ecommerce.dominio.pagamento import Pagamento
+from ecommerce.dominio.status_pedido import StatusPedido
 
 
 class Pedido:
@@ -119,7 +119,7 @@ class Pedido:
         self._pagamento.confirmar()
 
 if __name__ == "__main__":
-    from ecommerce.produto import Produto
+    from ecommerce.dominio.produto import Produto
 
     pedido = Pedido()
     produto1 = Produto("Camiseta", 50, quantidade_estoque=10, categoria="Roupas")

@@ -1,6 +1,6 @@
-from ecommerce.cliente import Cliente
-from ecommerce.criador_notificacao import CanalNotificacao
-from ecommerce.notificacao import Notificacao
+from ecommerce.dominio.cliente import Cliente
+from ecommerce.infraestrurura.criador_notificacao import CanalNotificacao
+from ecommerce.infraestrurura.notificacao import Notificacao
 
 
 class NotificacaoEspia(Notificacao):

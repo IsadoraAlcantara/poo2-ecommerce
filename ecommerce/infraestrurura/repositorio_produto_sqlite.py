@@ -1,8 +1,8 @@
 import sqlite3
 
-from .categoria import Categoria 
-from ecommerce.produto import Produto
-from ecommerce.repositorio_produto import RepositorioProduto
+from ..dominio.categoria import Categoria 
+from ecommerce.dominio.produto import Produto
+from ecommerce.infraestrurura.repositorio_produto import RepositorioProduto
 
 
 class ProdutoNaoEncontradoError(Exception):

@@ -1,4 +1,4 @@
-from ecommerce.categoria import Categoria
+from ecommerce.dominio.categoria import Categoria
 
 
 class TestCategoria:

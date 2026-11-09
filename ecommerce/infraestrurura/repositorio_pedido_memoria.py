@@ -1,5 +1,5 @@
-from ecommerce.pedido import Pedido
-from ecommerce.repositorio_pedido import RepositorioPedido
+from ecommerce.dominio.pedido import Pedido
+from ecommerce.infraestrurura.repositorio_pedido import RepositorioPedido
 
 
 class PedidoNaoEncontradoError(Exception):

@@ -1,5 +1,5 @@
 import pytest
-from ecommerce.estrategia_frete import FreteFixo, FreteGratisAcimaDe
+from ecommerce.dominio.estrategia_frete import FreteFixo, FreteGratisAcimaDe
 
 
 class TestFreteFixo:

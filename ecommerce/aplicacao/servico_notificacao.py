@@ -1,4 +1,4 @@
-from ecommerce.criador_notificacao import CriadorNotificacao
+from ecommerce.infraestrurura.criador_notificacao import CriadorNotificacao
 
 
 class ServicoNotificacaoPedido:
@@ -26,11 +26,11 @@ class ServicoNotificacaoPedido:
         notificacao.enviar(cliente.contato, mensagem)
 
 if __name__ == '__main__':
-    from ecommerce.carrinho import Carrinho
-    from ecommerce.categoria import Categoria
-    from ecommerce.cliente import Cliente
-    from ecommerce.produto import Produto
-    from ecommerce.forma_pagamento import FormaPagamento
+    from ecommerce.dominio.carrinho import Carrinho
+    from ecommerce.dominio.categoria import Categoria
+    from ecommerce.dominio.cliente import Cliente
+    from ecommerce.dominio.produto import Produto
+    from ecommerce.dominio.forma_pagamento import FormaPagamento
 
     cat = Categoria("Info")
     notebook = Produto("Notebook", 2000, 10, cat)

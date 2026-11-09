@@ -1,9 +1,9 @@
 import sqlite3
 
-from .item_pedido import ItemPedido
+from ..dominio.item_pedido import ItemPedido
 from .repositorio_pedido import RepositorioPedido
 from .repositorio_produto import RepositorioProduto
-from .pedido import Pedido
+from ..dominio.pedido import Pedido
 
 
 class PedidoNaoEncontradoError(Exception):

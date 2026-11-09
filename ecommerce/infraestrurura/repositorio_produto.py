@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from ecommerce.produto import Produto
+from ecommerce.dominio.produto import Produto
 
 
 # class ProdutoNaoEncontradoError(Exception):

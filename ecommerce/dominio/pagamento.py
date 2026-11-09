@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from datetime import date
 
-from ecommerce.situacao_pagamento import SituacaoPagamento
+from ecommerce.dominio.situacao_pagamento import SituacaoPagamento
 
 
 class Pagamento(ABC):

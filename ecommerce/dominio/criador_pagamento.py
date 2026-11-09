@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
-from ecommerce.forma_pagamento import FormaPagamento
-from ecommerce.pagamento import PagamentoBoleto, PagamentoCartao, PagamentoPix
+from ecommerce.dominio.forma_pagamento import FormaPagamento
+from ecommerce.dominio.pagamento import PagamentoBoleto, PagamentoCartao, PagamentoPix
 
 CHAVE_PIX_DA_LOJA = "loja@ecommerce.com"
 

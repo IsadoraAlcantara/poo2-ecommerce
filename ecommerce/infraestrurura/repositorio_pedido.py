@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from ecommerce.pedido import Pedido
+from ecommerce.dominio.pedido import Pedido
 
 
 class PedidoNaoEncontradoError(Exception):

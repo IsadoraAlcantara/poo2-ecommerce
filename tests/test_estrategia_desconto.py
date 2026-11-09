@@ -1,5 +1,5 @@
 import pytest
-from ecommerce.estrategia_desconto import DescontoPercentual, SemDesconto
+from ecommerce.dominio.estrategia_desconto import DescontoPercentual, SemDesconto
 
 
 class TestSemDesconto:

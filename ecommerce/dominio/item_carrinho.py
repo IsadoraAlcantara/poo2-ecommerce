@@ -10,8 +10,8 @@ class ItemCarrinho:
 
 
 if __name__ == "__main__":
-    from ecommerce.categoria import Categoria
-    from ecommerce.produto import Produto
+    from ecommerce.dominio.categoria import Categoria
+    from ecommerce.dominio.produto import Produto
 
     cat = Categoria("Informática")
     notebook = Produto("Notebook", 3500.0, 10, cat)

@@ -1,8 +1,8 @@
-from ecommerce.carrinho import Carrinho
-from ecommerce.categoria import Categoria
-from ecommerce.cliente import Cliente
-from ecommerce.produto import Produto
-from ecommerce.criador_pagamento import CriadorPagamento
+from ecommerce.dominio.carrinho import Carrinho
+from ecommerce.dominio.categoria import Categoria
+from ecommerce.dominio.cliente import Cliente
+from ecommerce.dominio.produto import Produto
+from ecommerce.dominio.criador_pagamento import CriadorPagamento
 
 
 class TestFluxoCompra:

@@ -1,8 +1,8 @@
 from datetime import date, timedelta
 
 import pytest
-from ecommerce.cupom import Cupom
-from ecommerce.estrategia_desconto import DescontoPercentual
+from ecommerce.dominio.cupom import Cupom
+from ecommerce.dominio.estrategia_desconto import DescontoPercentual
 
 
 class TestCupom:

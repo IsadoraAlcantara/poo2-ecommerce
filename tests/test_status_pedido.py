@@ -1,4 +1,4 @@
-from ecommerce.status_pedido import StatusPedido
+from ecommerce.dominio.status_pedido import StatusPedido
 
 
 class TestStatusPedido:

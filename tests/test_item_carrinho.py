@@ -1,6 +1,6 @@
-from ecommerce.categoria import Categoria
-from ecommerce.produto import Produto
-from ecommerce.item_carrinho import ItemCarrinho
+from ecommerce.dominio.categoria import Categoria
+from ecommerce.dominio.produto import Produto
+from ecommerce.dominio.item_carrinho import ItemCarrinho
 
 
 class TestItemCarrinho:

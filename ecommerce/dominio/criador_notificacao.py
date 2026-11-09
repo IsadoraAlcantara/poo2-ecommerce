@@ -1,5 +1,5 @@
 from enum import Enum
-from ecommerce.notificacao import Notificacao, NotificacaoEmail, NotificacaoSMS
+from ecommerce.infraestrurura.notificacao import Notificacao, NotificacaoEmail, NotificacaoSMS
 
 
 class CanalNotificacao(Enum):

@@ -1,9 +1,9 @@
 import pytest
 from datetime import timedelta, date
 
-from ecommerce.situacao_pagamento import SituacaoPagamento
-from ecommerce.pagamento import Pagamento, PagamentoBoleto
-from ecommerce.pedido import Pedido
+from ecommerce.dominio.situacao_pagamento import SituacaoPagamento
+from ecommerce.dominio.pagamento import Pagamento, PagamentoBoleto
+from ecommerce.dominio.pedido import Pedido
 
 
 class TestPagamento:

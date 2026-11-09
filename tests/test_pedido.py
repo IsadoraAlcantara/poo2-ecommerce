@@ -1,10 +1,10 @@
 import pytest
 
-from ecommerce.categoria import Categoria
-from ecommerce.pedido import Pedido
-from ecommerce.produto import Produto
-from ecommerce.estrategia_desconto import DescontoPercentual, SemDesconto
-from ecommerce.estrategia_frete import FreteFixo, FreteGratisAcimaDe
+from ecommerce.dominio.categoria import Categoria
+from ecommerce.dominio.pedido import Pedido
+from ecommerce.dominio.produto import Produto
+from ecommerce.dominio.estrategia_desconto import DescontoPercentual, SemDesconto
+from ecommerce.dominio.estrategia_frete import FreteFixo, FreteGratisAcimaDe
 
 
 class TestPedido:

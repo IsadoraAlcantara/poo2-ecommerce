@@ -1,10 +1,10 @@
 import pytest
 
-from ecommerce.categoria import Categoria
-from ecommerce.pedido import Pedido
-from ecommerce.produto import Produto
-from ecommerce.expedidor import ExpedidorLojaCentral, EntregaCorreios
-from ecommerce.criador_pagamento import CriadorPagamento
+from ecommerce.dominio.categoria import Categoria
+from ecommerce.dominio.pedido import Pedido
+from ecommerce.dominio.produto import Produto
+from ecommerce.dominio.expedidor import ExpedidorLojaCentral, EntregaCorreios
+from ecommerce.dominio.criador_pagamento import CriadorPagamento
 
 
 class TestExpedidor:

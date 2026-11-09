@@ -1,9 +1,9 @@
-from ecommerce.criador_pagamento import CriadorPagamento
-from ecommerce.entrega import Entrega
-from ecommerce.expedidor import Expedidor
-from ecommerce.forma_pagamento import FormaPagamento
-from ecommerce.repositorio_pedido import RepositorioPedido
-from ecommerce.servico_notificacao import ServicoNotificacao
+from ecommerce.dominio.criador_pagamento import CriadorPagamento
+from ecommerce.dominio.entrega import Entrega
+from ecommerce.dominio.expedidor import Expedidor
+from ecommerce.dominio.forma_pagamento import FormaPagamento
+from ecommerce.infraestrurura.repositorio_pedido import RepositorioPedido
+from ecommerce.aplicacao.servico_notificacao import ServicoNotificacao
 
 
 class ServicoPedido:

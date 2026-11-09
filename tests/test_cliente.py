@@ -1,4 +1,4 @@
-from ecommerce.cliente import Cliente
+from ecommerce.dominio.cliente import Cliente
 
 
 class TestCliente:

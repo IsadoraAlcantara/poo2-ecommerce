@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from ecommerce.entrega import Entrega, EntregaCorreios, EntregaTransportadora
+from ecommerce.dominio.entrega import Entrega, EntregaCorreios, EntregaTransportadora
 
 
 class Expedidor(ABC):
