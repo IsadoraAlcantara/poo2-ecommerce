@@ -1,3 +1,5 @@
+from math import prod
+
 from ecommerce.categoria import Categoria
 
 
@@ -9,6 +11,11 @@ class Produto:
         self.preco = preco
         self.quantidade_estoque = quantidade_estoque
         self.categoria = categoria
+
+    def atribuir_id(self, id: int ) -> None:
+        if produto.id is not None:
+            raise ValueError("O produto já possui id")
+        produto.id = id
 
     def esta_disponivel(self) -> bool:
         return self.quantidade_estoque > 0
