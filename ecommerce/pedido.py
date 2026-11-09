@@ -11,10 +11,15 @@ from ecommerce.status_pedido import StatusPedido
 
 class Pedido:
     def __init__(self) -> None:
+        self._id: int | None = None
         self._itens: list[ItemPedido] = []
         self._status = StatusPedido.CRIADO
         self._pagamento: Pagamento | None = None
         self._cupom: Cupom | None = None
+
+    @property
+    def id(self) -> int | None:
+        return self._id
 
     @property
     def itens(self) -> list[ItemPedido]:
@@ -31,6 +36,11 @@ class Pedido:
     @property
     def cupom(self) -> Cupom | None:
         return self._cupom
+
+    def atribuir_id(self, id: int) -> None:
+        if self._id is not None:
+            raise ValueError("Pedido ja possui identidade")
+        self._id = id
 
     def aplicar_cupom(self, cupom: Cupom) -> None:
         if not cupom.esta_valido():
@@ -103,3 +113,13 @@ class Pedido:
             forma, self, self.calcular_total(), **dados
         )
         self._pagamento.confirmar()
+
+if __name__ == "__main__":
+    from ecommerce.produto import Produto
+
+    pedido = Pedido()
+    produto1 = Produto("Camiseta", 50, quantidade_estoque=10, categoria="Roupas")
+    pedido.adicionar_item(produto1, quantidade=2)
+    # pedido.confirmar_pagamento()                                  # Pix (padrão)
+    pedido.confirmar_pagamento(FormaPagamento.BOLETO)
+    pedido.confirmar_pagamento(FormaPagamento.CARTAO_CREDITO, bandeira="MASTERCARD", parcelas=3)
